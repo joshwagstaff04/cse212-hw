@@ -40,3 +40,8 @@ public class Translator
         return "???";
     }
 }
+// I’m using a Dictionary to store word translations.
+// The original word is the key, and the translated word is the value.
+// AddWord(from, to) just inserts a key–value pair into the dictionary.
+// Translate(from) looks up the key and returns the translation in O(1) time.
+// If the word isn’t found, I return "???" to indicate a missing translation.

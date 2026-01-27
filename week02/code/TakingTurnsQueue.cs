@@ -40,7 +40,6 @@ public class TakingTurnsQueue
         else
         {
             Person person = _people.Dequeue();
-
             if (person.Turns <= 0)
             {
                 _people.Enqueue(person);
