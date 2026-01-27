@@ -22,9 +22,23 @@
         Console.WriteLine($"Number of duplicates : {CountDuplicates(data)}");
     }
 
+    //Add code here
+
     private static int CountDuplicates(int[] data)
     {
-        // Add code here.
-        return 0;
+        var unique = new HashSet<int>();
+        var duplicates = 0;
+
+        foreach (var x in data)
+        {
+            if (unique.Contains(x))
+                duplicates++;
+            else
+                unique.Add(x);
+        }
+
+        return duplicates;
     }
 }
+// Im using a hashset to track values
+// Increment counter when a value is already present
